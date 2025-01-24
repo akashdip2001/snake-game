@@ -13,6 +13,30 @@ let snakeArr = [
 
 let food = {x: 6, y: 7};
 
+
+
+function resetGame() {
+    // Reset game variables
+    inputDir = {x: 0, y: 0};
+    snakeArr = [{x: 13, y: 15}];
+    food = {x: 6, y: 7};
+    score = 0;
+    speed = 19;
+
+    // Update the score display
+    scoreBox.innerHTML = `<b>Score:</b> ${score}`;
+
+    // Remove the game over overlay
+    const overlay = document.getElementById('gameOverOverlay');
+    if (overlay) {
+        overlay.remove();
+    }
+
+    // Restart the game loop
+    musicSound.play();
+    window.requestAnimationFrame(main);
+}
+
 // Function to show Game Over Message
 function showGameOverMessage() {
     const overlay = document.createElement('div');
@@ -46,9 +70,7 @@ function showGameOverMessage() {
     restartButton.style.padding = '10px 20px';
     restartButton.style.fontSize = '1rem';
     restartButton.style.cursor = 'pointer';
-    restartButton.onclick = () => {
-        location.reload(); // Reload the page to restart the game
-    };
+    restartButton.onclick = resetGame; // Call the resetGame function
 
     overlay.appendChild(message);
     overlay.appendChild(scoreMessage);
