@@ -61,4 +61,4 @@ This project is free to use and modify for personal or educational purposes. Att
 
 ---
 
-Enjoy playing **SnakeMania **! Share your high scores with friends and challenge them to beat your record!
+Enjoy playing **SnakeMania**! Share your high scores with friends and challenge them to beat your record!
