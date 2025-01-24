@@ -1,37 +1,53 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SnakeMania - Ek Gaming Katha</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <div class="body">
-        <div id="scoreBox">Score: 0</div>
-        <div id="hiscoreBox">HiScore: 0</div>
-        <div id="board"></div>
-    </div>
-</body>
-<script src="js/index.js"></script>
-</html> -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SnakeMania - Ek Gaming Katha</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Snake Game</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+    }
+
+    canvas {
+      border: 2px solid #333;
+      background-color: #fff;
+    }
+
+    #score {
+      margin: 10px 0;
+      font-size: 20px;
+      color: #333;
+    }
+
+    #restartButton {
+      padding: 10px 20px;
+      font-size: 16px;
+      color: #fff;
+      background-color: #007BFF;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    #restartButton:hover {
+      background-color: #0056b3;
+    }
+  </style>
 </head>
 <body>
-    <div class="body">
-        <div id="scoreBox"><b>Score:</b> 0</div>
-        <div id="hiscoreBox"><b>HiScore:</b> 0</div>
-        <div id="board"></div>
-    </div>
-    <script src="js/index.js"></script>
+  <h1>Snake Game</h1>
+  <canvas id="gameCanvas" width="400" height="400"></canvas>
+  <div id="score">Score: 0</div>
+  <button id="restartButton">Restart Game</button>
+
+  <script src="snake-game.js"></script>
 </body>
 </html>
